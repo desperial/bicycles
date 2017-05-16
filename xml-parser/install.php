@@ -13,7 +13,7 @@ $mysqli = mysqli_init();
     die('Установка MYSQLI_OPT_CONNECT_TIMEOUT завершилась провалом');
   }
 
-  if (!$mysqli->real_connect('host', 'username', 'pass', 'dbname', 'port')) {
+  if (!$mysqli->real_connect('localhost', 'root', '', 'bicycles')) {
     die('Ошибка подключения (' . mysqli_connect_errno() . ') '
             . mysqli_connect_error());
   };
