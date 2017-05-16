@@ -24,14 +24,21 @@ $mysqli = mysqli_init();
   //announce - описание объекта
   //img - изображение объекта
   //price - цена на объект
-  $query = "CREATE TABLE item (
-  	id INT(6) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  	adress CHAR(50) NOT NULL,
-  	obj_type CHAR(10) NULL,
-  	announce TEXT(400) NULL,
-  	img CHAR(50) NULL,
-    price int(10) NULL
-  )";
+  $query = "CREATE TABLE realty (
+	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	user INT(11) NULL,
+	country CHAR(2) NULL,
+	currency CHAR(3) NULL,
+	price DECIMAL(11,0) NULL,
+	area DECIMAL(6,1) NULL,
+	deal ENUM('buy','rent') NULL,
+	type ENUM('residental','commercial') NULL,
+	subtype ENUM('house','building','land','investment','apartment','premises','others','townhouse') NULL,
+	grp ENUM('primary','secondary') NULL,
+	lat DECIMAL(10,8) NULL,
+	longt DECIMAL(11,8) NULL,
+	adress CHAR(255) NULL
+)";
 
 if (!$mysqli->query ($query)){
   die('Не получилось создать таблицу');
