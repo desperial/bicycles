@@ -18,12 +18,7 @@ $mysqli = mysqli_init();
             . mysqli_connect_error());
   };
   //Создание таблицы
-  //id - ключ
-  //adress - адрес объекта
-  //obj_type - тип объекта
-  //announce - описание объекта
-  //img - изображение объекта
-  //price - цена на объект
+
   $query = "CREATE TABLE realty (
 	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	user INT(11) NULL,
