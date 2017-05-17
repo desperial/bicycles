@@ -22,6 +22,7 @@ $mysqli = mysqli_init();
 $query = "CREATE TABLE IF NOT EXISTS realty (
 	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	user INT(11) NULL,
+  partner_id INT(11) NULL,
 	country CHAR(2) NULL,
 	currency CHAR(3) NULL,
 	price DECIMAL(11,0) NULL,
