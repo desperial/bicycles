@@ -21,7 +21,9 @@
 
     }
     public function Compare(){
-    	
+    	$objects = $dbo->query("SELECT * FROM `realty` WHERE")->fetchAll();
+    	foreach ($objects as $object):
+    	endforeach;
     }
     public function Cache(){}
     public function WriteInDB(){}
