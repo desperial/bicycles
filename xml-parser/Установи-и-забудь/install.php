@@ -13,7 +13,7 @@ $mysqli = mysqli_init();
     die('Установка MYSQLI_OPT_CONNECT_TIMEOUT завершилась провалом');
   }
 
-  if (!$mysqli->real_connect('localhost', 'root', '', 'bicycles')) {
+  if (!$mysqli->real_connect('localhost', 'root', 'L3zctxfg!', 'bicycles')) {
     die('Ошибка подключения (' . mysqli_connect_errno() . ') '
             . mysqli_connect_error());
   };
@@ -33,6 +33,14 @@ $mysqli = mysqli_init();
 	lat DECIMAL(10,8) NULL,
 	longt DECIMAL(11,8) NULL,
 	adress CHAR(255) NULL
+);
+CREATE TABLE IF NOT EXISTS partners (
+  id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  partner VARCHAR(55) NULL
+);
+CREATE TABLE IF NOT EXISTS partner_links (
+  partner_id INT(11) NOT NULL,
+  link VARCHAR(255) NULL
 )";
 
 if (!$mysqli->query ($query)){
