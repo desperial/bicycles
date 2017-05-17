@@ -19,7 +19,7 @@ $mysqli = mysqli_init();
   };
   //Создание таблицы
 
-$query = "CREATE TABLE realty (
+$query = "CREATE TABLE IF NOT EXISTS realty (
 	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	user INT(11) NULL,
 	country CHAR(2) NULL,
@@ -33,16 +33,27 @@ $query = "CREATE TABLE realty (
 	lat DECIMAL(10,8) NULL,
 	longt DECIMAL(11,8) NULL,
 	adress CHAR(255) NULL
-);
-CREATE TABLE IF NOT EXISTS partners (
+);";
+
+
+
+if (!$mysqli->query ($query)){
+  die('Не получилось создать таблицу');
+};
+
+$query = "CREATE TABLE IF NOT EXISTS partners (
   id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   partner VARCHAR(55) NULL
-); 
-CREATE TABLE IF NOT EXISTS partner_links (
+); ";
+
+if (!$mysqli->query ($query)){
+  die('Не получилось создать таблицу');
+};
+
+$query = "CREATE TABLE IF NOT EXISTS partner_links (
   partner_id INT(11) NOT NULL,
   link VARCHAR(255) NULL
 )";
-
 if (!$mysqli->query ($query)){
   die('Не получилось создать таблицу');
 };
