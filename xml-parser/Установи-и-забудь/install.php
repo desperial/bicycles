@@ -19,7 +19,7 @@ $mysqli = mysqli_init();
   };
   //Создание таблицы
 
-  $query = "CREATE TABLE realty (
+$query = "CREATE TABLE realty (
 	id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	user INT(11) NULL,
 	country CHAR(2) NULL,
@@ -37,7 +37,7 @@ $mysqli = mysqli_init();
 CREATE TABLE IF NOT EXISTS partners (
   id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   partner VARCHAR(55) NULL
-);
+); 
 CREATE TABLE IF NOT EXISTS partner_links (
   partner_id INT(11) NOT NULL,
   link VARCHAR(255) NULL
