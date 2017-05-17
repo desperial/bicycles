@@ -18,11 +18,11 @@
     	foreach ($objects as $object):
     		foreach ($this->xmlFile->object as $key=>$file_object):
     			if ($file_object->id == $object->id):
-    				if (($file_object->price != $object->price) || ($file_object->deal != $object->deal) 
+    				if (($file_object->price != $object->price) || ($file_object->deal != $object->deal) //Проверка на совпадения в выборке
     					|| ($file_object->currency != $object->currency))
-    					$this->xmlFile->object[$key]->addChild("edited", "1");
+    					$file_object[0]->addChild("edited", "1"); //Если совпадение частичное - ставим пометку "отредактировано"
     				else {
-    					unset($file_object[0]);
+    					unset($file_object[0]); //Если совпадение полное - убираем из выборки
     					break;
     				}
     			endif;
@@ -34,6 +34,8 @@
 
   }
 
+
+//Рабочая часть, убрать из модели к едрене-фене!
   $test = new XMLdoc();
   $test->DBConnect();
   $test->Load("test.xml");
