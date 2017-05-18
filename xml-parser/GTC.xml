@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<feed>
+  <object>
+    <id>12</id>
+    <country>RU</country>
+    <currency>RUB</currency>
+    <price>9000000</price>
+    <area>300</area>
+    <deal>buy</deal>
+    <type>residental</type>
+    <subtype>land</subtype>
+    <grp>primary</grp>
+    <lat>73.35275504724864</lat>
+    <longt>61.27398874712668</longt>
+    <adress>Рандомная строка, которая вообще не ебёт по сути пока.</adress>
+  </object>
+  <object>
+    <id>8</id>
+    <country>RU</country>
+    <currency>RUB</currency>
+    <price>9100000</price>
+    <area>350</area>
+    <deal>buy</deal>
+    <type>residental</type>
+    <subtype>land</subtype>
+    <grp>primary</grp>
+    <lat>73.35275504724864</lat>
+    <longt>61.27398874712668</longt>
+    <adress>Рандомная строка, которая вообще не ебёт по сути пока.</adress>
+  </object>
+  <object>
+    <id>13</id>
+    <country>RU</country>
+    <currency>RUB</currency>
+    <price>9000000</price>
+    <area>300</area>
+    <deal>buy</deal>
+    <type>residental</type>
+    <subtype>land</subtype>
+    <grp>primary</grp>
+    <lat>73.35275504724864</lat>
+    <longt>61.27398874712668</longt>
+    <adress>Рандомная строка, которая вообще не ебёт по сути пока.</adress>
+  </object>
+  <object>
+    <id>14</id>
+    <country>RU</country>
+    <currency>RUB</currency>
+    <price>9000000</price>
+    <area>300</area>
+    <deal>buy</deal>
+    <type>residental</type>
+    <subtype>land</subtype>
+    <grp>primary</grp>
+    <lat>73.35275504724864</lat>
+    <longt>61.27398874712668</longt>
+    <adress>Рандомная строка, которая вообще не ебёт по сути пока.</adress>
+  </object>
+  <object>
+    <id>15</id>
+    <country>RU</country>
+    <currency>RUB</currency>
+    <price>9000000</price>
+    <area>300</area>
+    <deal>buy</deal>
+    <type>residental</type>
+    <subtype>land</subtype>
+    <grp>primary</grp>
+    <lat>73.35275504724864</lat>
+    <longt>61.27398874712668</longt>
+    <adress>Рандомная строка, которая вообще не ебёт по сути пока.</adress>
+  </object>
+</feed>
