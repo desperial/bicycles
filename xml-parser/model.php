@@ -2,14 +2,14 @@
   class XMLdoc {
     public $xmlFile;
     private $dbo;
-    private $user = "root";
-    private $pass = "L3zctxfg!";
     private $items4Delete = array();
     public $partners;
     private $deleted = array();
 
     function __construct() {
-        $this->dbo = new PDO('mysql:host=localhost;dbname=bicycles',$this->user,$this->pass);
+        $config = file_get_contents("config.json");
+        $config=json_decode($config);
+        $this->dbo = new PDO('mysql:host=localhost;dbname=bicycles',$config->user,$config->pass);
     }
     public function Load($path){
         $this->xmlFile = simplexml_load_file($path);
@@ -86,7 +86,7 @@
                     "price = ".$file_object->price.", area = ".$file_object->area.", deal = '".$file_object->deal."', ".
                     "type = '".$file_object->type."', subtype = '".$file_object->subtype."', grp = '".$file_object->grp."', ".
                     "lat = ".$file_object->lat.", longt = ".$file_object->longt.", adress = ".$file_object->adress." ".
-                    "WHERE object_id = ".$file_object->id." AND partner_id = ".$partner; 
+                    "WHERE object_id = ".$file_object->id." AND partner_id = ".$partner;
             else:
                 $query_add[] = "(".$file_object->id.",".$partner.",'".$file_object->country."','".$file_object->currency."',".
                 $file_object->price.",".$file_object->area.",'".$file_object->deal."','".$file_object->type."','".$file_object->subtype."','".
