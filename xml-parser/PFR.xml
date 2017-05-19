@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <feed>
   <object>
-    <id>12</id>
+    <id>122</id>
     <country>PA</country>
     <currency>USD</currency>
     <price>20</price>
@@ -15,7 +15,7 @@
     <adress>cute land near Crate of Madness</adress>
   </object>
   <object>
-    <id>8</id>
+    <id>34</id>
     <country>RU</country>
     <currency>RUB</currency>
     <price>9100000</price>

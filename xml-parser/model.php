@@ -6,6 +6,7 @@
     private $pass = "L3zctxfg!";
     private $items4Delete = array();
     public $partners;
+    private $deleted = array();
 
     function __construct() {
         $this->dbo = new PDO('mysql:host=localhost;dbname=bicycles',$this->user,$this->pass);
@@ -50,8 +51,10 @@
         if ($objects) :
             $objects = $objects->fetchAll(PDO::FETCH_CLASS);
             foreach ($objects as $object):
+                $exist = false;
                 foreach ($this->xmlFile->object as $file_object):
                     if ($file_object->id == $object->object_id):
+                        $exist = true;
                         if (($file_object->price != $object->price) || ($file_object->deal != $object->deal) //Проверка на совпадения в выборке
                             || ($file_object->currency != $object->currency) || ($file_object->country != $object->country)
                             || ($file_object->area != $object->area) || ($file_object->type != $object->type)
@@ -66,6 +69,8 @@
                         }
                     endif;
                 endforeach;
+                if (!$exist)
+                    $this->deleted[] = $object->id;
             endforeach;
             $this->clearXmlItem();
         endif;
@@ -97,6 +102,9 @@
         if ($query_update) :
             $query = implode(";",$query_update);
             $this->dbo->query($query);
+        endif;
+        if ($this->deleted) :
+            $this->dbo->query("DELETE FROM realty WHERE id IN (".implode(",",$this->deleted).")");
         endif;
         // $this->dbo = null;
     }
