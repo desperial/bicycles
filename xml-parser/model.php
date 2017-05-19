@@ -85,7 +85,7 @@
                 $query_update[] = "UPDATE realty SET country = '".$file_object->country."', `currency` = '".$file_object->currency."', ".
                     "price = ".$file_object->price.", area = ".$file_object->area.", deal = '".$file_object->deal."', ".
                     "type = '".$file_object->type."', subtype = '".$file_object->subtype."', grp = '".$file_object->grp."', ".
-                    "lat = ".$file_object->lat.", longt = ".$file_object->longt.", adress = '".$file_object->adress."' ".
+                    "lat = ".$file_object->lat.", longt = ".$file_object->longt.", adress = ".$file_object->adress." ".
                     "WHERE object_id = ".$file_object->id." AND partner_id = ".$partner; 
             else:
                 $query_add[] = "(".$file_object->id.",".$partner.",'".$file_object->country."','".$file_object->currency."',".
