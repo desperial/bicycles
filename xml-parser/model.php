@@ -60,7 +60,7 @@
                             || ($file_object->area != $object->area) || ($file_object->type != $object->type)
                             || ($file_object->subtype != $object->subtype) || ($file_object->grp != $object->grp)
                             || ($file_object->lat != $object->lat) || ($file_object->longt != $object->longt)
-                            || ($file_object->adress != $object->adress))
+                            || ($this->dbo->quote($file_object->adress) != $object->adress))
                             $file_object[0]->addChild("edited", "1"); //Если совпадение частичное - ставим пометку "отредактировано"
                         else {
                             $this->items4Delete[] = $file_object;
