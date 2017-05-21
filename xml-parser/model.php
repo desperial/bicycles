@@ -8,8 +8,8 @@
 
     function __construct() {
         $config = file_get_contents("config.json");
-        $config=json_decode($config);
-        $this->dbo = new PDO('mysql:host=localhost;dbname=bicycles',$config->user,$config->pass);
+        $config = json_decode($config);
+        $this->dbo = new PDO('mysql:host=localhost;dbname=bicycles', $config->user, $config->pass);
     }
     public function Load($path){
         $this->xmlFile = simplexml_load_file($path);
