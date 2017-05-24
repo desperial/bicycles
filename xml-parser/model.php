@@ -23,6 +23,10 @@
         $this->items4Delete = array();
     }
     public function Validate(){
+        libxml_use_internal_errors(true);
+        if ($this->xmlFile === false) {
+            return false;
+        }
         foreach ($this->xmlFile->object as $file_object):
             $check = true;
             $check = preg_match("/^\d{1,11}$/",$file_object->id) ? $check : false;
@@ -45,6 +49,7 @@
             }
         endforeach;
         $this->clearXmlItem();
+        return true;
     }
     public function Compare($partner){
         $objects = $this->dbo->query("SELECT * FROM `realty` WHERE `realty`.`partner_id` = ".$partner);

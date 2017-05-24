@@ -15,7 +15,7 @@
 	<div style=" margin: 0 auto;">
 	<? foreach ($partners as $partner) : 
 		$realty->Load($partner->link);
-		$realty->Validate();
+		if ($realty->Validate()) : 
 		$realty->Compare($partner->partner_id);
 		$realty->WriteInDB($partner->partner_id);
 	?>
@@ -58,6 +58,7 @@
 		</tbody>
 		</table>
 	</div>
+		<? endif; ?>
 	<? endforeach;?>
 	</div>
 </BODY>
