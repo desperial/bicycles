@@ -1,0 +1,122 @@
+{
+    "id": {
+        "FIELD_NAME": "id",
+        "FIELD_TYPE": "int(11)",
+        "FIELD_ISNULL": "NO",
+        "FIELD_KEY": "PRI",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": "auto_increment"
+    },
+    "user": {
+        "FIELD_NAME": "user",
+        "FIELD_TYPE": "int(11)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "object_id": {
+        "FIELD_NAME": "object_id",
+        "FIELD_TYPE": "int(11)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "partner_id": {
+        "FIELD_NAME": "partner_id",
+        "FIELD_TYPE": "int(11)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "country": {
+        "FIELD_NAME": "country",
+        "FIELD_TYPE": "char(2)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "currency": {
+        "FIELD_NAME": "currency",
+        "FIELD_TYPE": "char(3)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "price": {
+        "FIELD_NAME": "price",
+        "FIELD_TYPE": "decimal(11,0)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "area": {
+        "FIELD_NAME": "area",
+        "FIELD_TYPE": "decimal(6,1)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "deal": {
+        "FIELD_NAME": "deal",
+        "FIELD_TYPE": "enum('buy','rent')",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "type": {
+        "FIELD_NAME": "type",
+        "FIELD_TYPE": "enum('residental','commercial')",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "subtype": {
+        "FIELD_NAME": "subtype",
+        "FIELD_TYPE": "enum('house','building','land','investment','apartment','premises','others','townhouse')",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "grp": {
+        "FIELD_NAME": "grp",
+        "FIELD_TYPE": "enum('primary','secondary')",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "lat": {
+        "FIELD_NAME": "lat",
+        "FIELD_TYPE": "decimal(10,8)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "longt": {
+        "FIELD_NAME": "longt",
+        "FIELD_TYPE": "decimal(11,8)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    },
+    "adress": {
+        "FIELD_NAME": "adress",
+        "FIELD_TYPE": "char(255)",
+        "FIELD_ISNULL": "YES",
+        "FIELD_KEY": "",
+        "FIELD_DEFAULT_VALUE": null,
+        "FIELD_EXTRA": ""
+    }
+}
