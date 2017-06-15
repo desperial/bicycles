@@ -86,6 +86,18 @@
         $query_add = Array();
         $query_update = Array();
         foreach ($this->xmlFile->object as $file_object) :
+            if (!file_exists('upload/'.$partner)) {
+                    mkdir('upload/'.$partner, 0755, true);
+            }
+            if (!file_exists('upload/'.$partner."/".$file_object->id)) {
+                mkdir('upload/'.$partner."/".$file_object->id, 0755, true);
+            }
+            if ($file_object->images) {
+                foreach ($file_object->images->image as $image) {
+                    copy($image['src'].$image[0], 'upload/'.$partner."/".$file_object->id."/".$image[0]);
+                    print_r($image);
+                }
+            }
             if (isset($file_object->edited) && ($file_object->edited == 1)) : //Если с пометкой "отредактировано - собираем в запрос на UPDATE"
                 $query_update[] = "UPDATE realty SET country = '".$file_object->country."', `currency` = '".$file_object->currency."', ".
                     "price = ".$file_object->price.", area = ".$file_object->area.", deal = '".$file_object->deal."', ".
@@ -96,6 +108,7 @@
                 $query_add[] = "(".$file_object->id.",".$partner.",'".$file_object->country."','".$file_object->currency."',".
                 $file_object->price.",".$file_object->area.",'".$file_object->deal."','".$file_object->type."','".$file_object->subtype."','".
                 $file_object->grp."',".$file_object->lat.",".$file_object->longt.",".$file_object->adress.")";
+                
             endif;
         endforeach;
 

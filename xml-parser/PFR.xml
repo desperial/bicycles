@@ -13,6 +13,10 @@
     <lat>73.35275504724864</lat>
     <longt>61.27398874712668</longt>
     <adress>cute land near Crate of Madness</adress>
+    <images>
+    	<image src="site images/">img1.jpg</image>
+    	<image src="site images/">img2.jpg</image>
+    </images>
   </object>
   <object>
     <id>34</id>
