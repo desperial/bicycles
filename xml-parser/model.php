@@ -95,7 +95,6 @@
             if ($file_object->images) {
                 foreach ($file_object->images->image as $image) {
                     copy($image['src'].$image[0], 'upload/'.$partner."/".$file_object->id."/".$image[0]);
-                    print_r($image);
                 }
             }
             if (isset($file_object->edited) && ($file_object->edited == 1)) : //Если с пометкой "отредактировано - собираем в запрос на UPDATE"
